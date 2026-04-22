@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.google.devtools.ksp) // Apply the plugin here
     alias(libs.plugins.dagger.hilt)
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("org.jetbrains.kotlin.plugin.serialization")
+
 }
 
 android {
@@ -90,6 +92,14 @@ dependencies {
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
+
+    // Ktor
+    implementation(libs.ktor.client.android)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
+
+    // Image processing
+    implementation(libs.coil.compose)
 
     //Test Cases
     testImplementation(libs.junit)
