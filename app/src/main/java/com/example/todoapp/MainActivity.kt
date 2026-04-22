@@ -20,6 +20,7 @@ class MainActivity : ComponentActivity() {
                 AppNavHost(
                     navController = navController
                 )
+                //ArticleListScreen(modifier = Modifier.padding(16.dp))
             }
         }
     }
